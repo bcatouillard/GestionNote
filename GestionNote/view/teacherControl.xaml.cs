@@ -1,17 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows;
+﻿using GestionNote.Classes;
+using GestionNote.control;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
 
 namespace GestionNote.view
 {
@@ -20,9 +9,18 @@ namespace GestionNote.view
     /// </summary>
     public partial class teacherControl : UserControl
     {
+        UserControls uc = new UserControls();
+
         public teacherControl()
         {
             InitializeComponent();
+        }
+
+        public void FillInfo()
+        {
+            NameUser.Content += Session.GetInstance().User.Name;
+            ClassUser.Content += Session.GetInstance().User.Classe;
+            MatiereUser.Content += (uc.GetMatiere(Session.GetInstance().User) != MatiereEnum.nul) ? "" + uc.GetMatiere(Session.GetInstance().User) : "";
         }
     }
 }

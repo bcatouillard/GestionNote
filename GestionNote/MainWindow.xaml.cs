@@ -1,5 +1,6 @@
 ﻿using System.Windows;
 using GestionNote.Classes;
+using GestionNote.Classes.Data;
 using GestionNote.view;
 
 namespace GestionNote
@@ -13,7 +14,6 @@ namespace GestionNote
         {
             InitializeComponent();
             Nav.GetInstance().ChangeView += MainWindow_ChangeView;
-            //Session.GetInstance().CurrentUser += MainWindow_CurrentUser;
         }
 
         private void MainWindow_CurrentUser(object sender, CurrentUserConnectedEventArgs e)
@@ -41,6 +41,7 @@ namespace GestionNote
                     connect.Visibility = Visibility.Collapsed;
                     student.Visibility = Visibility.Collapsed;
                     teacher.Visibility = Visibility.Visible;
+                    teacher.FillInfo();
                     break;
                 default:
                     connect.Visibility = Visibility.Visible;

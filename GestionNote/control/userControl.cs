@@ -43,6 +43,21 @@ namespace GestionNote.control
             }
         }
 
-        
+        public MatiereEnum GetMatiere(User usr)
+        {
+            using (Classes.Data.AppContext context = new Classes.Data.AppContext())
+            {
+                IEnumerable<Teacher> teacherList = context.GetTeachers.Where((user) => user.Login == usr.Login);
+
+                foreach (Teacher teacher in teacherList)
+                {
+                    if (teacher.Login == usr.Login)
+                    {
+                        return teacher.Matiere;
+                    }
+                }
+            }
+            return MatiereEnum.nul;
+        }
     }
 }

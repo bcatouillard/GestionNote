@@ -10,6 +10,7 @@ namespace GestionNote.Classes
     {
         Français,
         Mathématiques,
-        Anglais
+        Anglais,
+        nul
     }
 }
