@@ -1,19 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
+﻿using System.Windows;
 using GestionNote.Classes;
-using GestionNote.Classes.Data;
 using GestionNote.view;
 
 namespace GestionNote
@@ -27,6 +13,12 @@ namespace GestionNote
         {
             InitializeComponent();
             Nav.GetInstance().ChangeView += MainWindow_ChangeView;
+            //Session.GetInstance().CurrentUser += MainWindow_CurrentUser;
+        }
+
+        private void MainWindow_CurrentUser(object sender, CurrentUserConnectedEventArgs e)
+        {
+            student.FillInfo();
         }
 
         private void MainWindow_ChangeView(object sender, ChangeViewEventArgs e)
@@ -43,6 +35,7 @@ namespace GestionNote
                     connect.Visibility = Visibility.Collapsed;
                     student.Visibility = Visibility.Visible;
                     teacher.Visibility = Visibility.Collapsed;
+                    student.FillInfo();
                     break;
                 case ViewEnum.teacherControl:
                     connect.Visibility = Visibility.Collapsed;

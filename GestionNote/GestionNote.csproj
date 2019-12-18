@@ -68,6 +68,7 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Compile Include="Classes\Data\generateUsers.cs" />
+    <Compile Include="Classes\Session.cs" />
     <Compile Include="Classes\Nav.cs" />
     <Compile Include="Classes\RoleEnum.cs" />
     <Compile Include="Classes\User.cs" />

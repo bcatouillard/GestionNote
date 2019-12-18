@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace GestionNote.control
 {
-    public class userControl
+    public class UserControls
     {
         public bool SignIn(string log, string pswd, RoleEnum list)
         {
@@ -32,21 +32,17 @@ namespace GestionNote.control
                     {
                         usr = user;
                         success = true;
+                        Session.GetInstance().User = user;
                     }
                     else
                     {
                         success = false;
                     }
                 }
-                if(success == true)
-                {
-                    return true;
-                }
-                else
-                {
-                    return false;
-                }
+                return success;
             }
         }
+
+        
     }
 }

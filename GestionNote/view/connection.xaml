@@ -14,7 +14,7 @@
             <Label Content="Connectez-vous afin d'accéder au service" HorizontalAlignment="Left" Margin="80,10,0,0" VerticalAlignment="Top" FontSize="14"/>
             <Label Content="Login :" HorizontalAlignment="Left" Margin="61,60,0,0" VerticalAlignment="Top" Width="76"/>
             <Label Content="Mot de passe :" HorizontalAlignment="Left" Margin="61,91,0,0" VerticalAlignment="Top"/>
-            <Button Content="Se connecter" Margin="131,77,144,10" Grid.Row="1" Click="Button_Click"/>
+            <Button Content="Se connecter" Margin="134,47,141,40" Grid.Row="1" Click="Button_Click" HorizontalAlignment="Center" VerticalAlignment="Center"/>
             <TextBox Name="LoginTextBox" HorizontalAlignment="Left" Height="18" Margin="213,68,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="131" Text="eleve"/>
             <PasswordBox Name="MdpPasswordBox" HorizontalAlignment="Left" Margin="213,99,0,0" VerticalAlignment="Top" Width="131" Password="eleve"/>
             <Label Name="MessageLabel" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="52,10,0,0" Grid.Row="1" Width="348" Height="32">
