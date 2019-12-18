@@ -8,7 +8,7 @@ namespace GestionNote.Classes.Data
 {
     class generateUsers
     {
-        public void GenerateUsers()
+       /* public void GenerateUsers()
         {
             using (AppContext context = new AppContext())
             {
@@ -20,6 +20,6 @@ namespace GestionNote.Classes.Data
 
                 context.SaveChanges();
             }
-        }
+        }*/
     }
 }
