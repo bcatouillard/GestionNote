@@ -1,10 +1,14 @@
-﻿namespace GestionNote.Classes
+﻿using System.Collections.Generic;
+
+namespace GestionNote.Classes
 {
     class Student : User
     {
         public int Age { get; set; }
 
         public string Classe { get; set; }
+
+        public Dictionary<string, int[]> Notes { get; set; }
 
         public Student() { }
 
