@@ -6,7 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace GestionNote
+namespace GestionNote.Classes.Data
 {
     class AppContext : DbContext
     {

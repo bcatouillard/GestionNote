@@ -6,19 +6,18 @@ namespace GestionNote.Classes
     {
         public int Age { get; set; }
 
-        public string Classe { get; set; }
-
         public Dictionary<string, int[]> Notes { get; set; }
 
         public Student() { }
 
-        public Student(string name, string login, string password, int age, string classe)
+        public Student(string name, string login, string password, int age, string classe, Dictionary<string, int[]> notes)
         {
             Name = name;
             Login = login;
             Password = password;
             Age = age;
             Classe = classe;
+            Notes = notes;
         }
     }
 }
