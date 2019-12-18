@@ -1,4 +1,7 @@
-﻿using System;
+﻿using GestionNote.Classes;
+using GestionNote.control;
+using GestionNote.view;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -13,16 +16,16 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace GestionNote
+namespace GestionNote.view
 {
     /// <summary>
     /// Logique d'interaction pour connection.xaml
     /// </summary>
-    public partial class connection : UserControl
+    public partial class Connection : UserControl
     {
         readonly userControl uc = new userControl();
 
-        public connection()
+        public Connection()
         {
             InitializeComponent();
         }
@@ -31,17 +34,33 @@ namespace GestionNote
         {
             string login = LoginTextBox.Text;
             string password = MdpPasswordBox.Password;
-
-            bool success = uc.SignIn(login, password);
+            bool success = false;
+            if ((bool)isStudent.IsChecked)
+            {
+                success = uc.SignIn(login, password,RoleEnum.student);
+            }
+            if ((bool)isTeacher.IsChecked)
+            {
+                success = uc.SignIn(login, password, RoleEnum.teacher);
+            }
 
             if (success == true)
             {
                 connect.Visibility = Visibility.Hidden;
+                if ((bool)isStudent.IsChecked)
+                {
+                    Nav.GetInstance().GoTo(ViewEnum.studentControl);
+                }
+                if ((bool)isTeacher.IsChecked)
+                {
+                    Nav.GetInstance().GoTo(ViewEnum.teacherControl);
+                }
             }
             else
             {
                 MessageLabel.Content = "Les identifiants sont incorrects";
             }
         }
+
     }
 }

@@ -10,13 +10,17 @@ namespace GestionNote.Classes
 {
     class Teacher : User
     {
+        public string Matiere { get; set; }
+
         public Teacher() { }
 
-        public Teacher(string name, string login, string password)
+        public Teacher(string name, string login, string password, string classe, string matiere)
         {
             Name = name;
             Login = login;
             Password = password;
+            Classe = classe;
+            Matiere = matiere;
         }
     }
 }

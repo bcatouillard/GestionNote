@@ -16,17 +16,20 @@ namespace GestionNote.Classes
 
         public string Name { get; set; }
 
+        public string Classe { get; set; }
+
         public string Login { get; set; }
 
         public string Password { get; set; }
 
         public User() { }
 
-        public User(string name, string login, string password)
+        public User(string name, string login, string password, string classe)
         {
             Name = name;
             Login = login;
             Password = password;
+            Classe = classe;
         }
     }
 }

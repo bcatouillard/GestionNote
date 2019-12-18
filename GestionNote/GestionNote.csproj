@@ -47,6 +47,8 @@
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Core" />
@@ -66,13 +68,30 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Compile Include="Classes\Data\generateUsers.cs" />
+    <Compile Include="Classes\Nav.cs" />
+    <Compile Include="Classes\RoleEnum.cs" />
     <Compile Include="Classes\User.cs" />
+    <Compile Include="Classes\ViewEnum.cs" />
     <Compile Include="Migrations\201912111538486_add_Data.cs" />
     <Compile Include="Migrations\201912111538486_add_Data.designer.cs">
       <DependentUpon>201912111538486_add_Data.cs</DependentUpon>
     </Compile>
-    <Compile Include="userControl.cs" />
-    <Page Include="connection.xaml">
+    <Compile Include="Migrations\201912180936513_addMatiereClasse.cs" />
+    <Compile Include="Migrations\201912180936513_addMatiereClasse.designer.cs">
+      <DependentUpon>201912180936513_addMatiereClasse.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201912180940244_refactoClass.cs" />
+    <Compile Include="Migrations\201912180940244_refactoClass.designer.cs">
+      <DependentUpon>201912180940244_refactoClass.cs</DependentUpon>
+    </Compile>
+    <Compile Include="control\userControl.cs" />
+    <Compile Include="view\studentControl.xaml.cs">
+      <DependentUpon>studentControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="view\teacherControl.xaml.cs">
+      <DependentUpon>teacherControl.xaml</DependentUpon>
+    </Compile>
+    <Page Include="view\connection.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -84,16 +103,24 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="AppContext.cs" />
+    <Compile Include="Classes\Data\AppContext.cs" />
     <Compile Include="Classes\Student.cs" />
     <Compile Include="Classes\Teacher.cs" />
-    <Compile Include="connection.xaml.cs">
+    <Compile Include="view\connection.xaml.cs">
       <DependentUpon>connection.xaml</DependentUpon>
     </Compile>
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="view\studentControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="view\teacherControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Migrations\Configuration.cs" />
@@ -112,6 +139,12 @@
     </Compile>
     <EmbeddedResource Include="Migrations\201912111538486_add_Data.resx">
       <DependentUpon>201912111538486_add_Data.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201912180936513_addMatiereClasse.resx">
+      <DependentUpon>201912180936513_addMatiereClasse.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201912180940244_refactoClass.resx">
+      <DependentUpon>201912180940244_refactoClass.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

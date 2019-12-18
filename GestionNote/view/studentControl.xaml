@@ -1,0 +1,22 @@
+﻿<UserControl x:Class="GestionNote.view.studentControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:System="clr-namespace:System;assembly=mscorlib"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800" Background="White">
+    <Grid Name="studControl">
+        <Label Content="Nom prénom" HorizontalAlignment="Left" Margin="268,31,0,0" VerticalAlignment="Top" Width="185" x:Name="NameUser"/>
+        <Label Content="classe&#xA;" HorizontalAlignment="Left" Margin="453,31,0,0" VerticalAlignment="Top" Width="97" x:Name="ClassUser"/>
+        <ComboBox x:Name="MatiereUser" HorizontalAlignment="Left" Margin="630,35,0,0" VerticalAlignment="Top" Width="120" SelectedIndex="0">
+            <System:String>Matiere</System:String>
+        </ComboBox>
+        <DataGrid AutoGenerateColumns="False"  Margin="0,121,0,10">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Matière"  FontFamily="Arial" FontStyle="Italic" Width="*"/>
+                <DataGridTextColumn Header="Notes"  FontFamily="Arial" FontWeight="Bold" Width="*"/>
+            </DataGrid.Columns>
+        </DataGrid>
+    </Grid>
+</UserControl>
