@@ -1,4 +1,6 @@
-﻿using System;
+﻿using GestionNote.Classes;
+using GestionNote.control;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -20,7 +22,13 @@ namespace GestionNote.view
     /// </summary>
     public partial class studentControl : UserControl
     {
-        public studentControl() => InitializeComponent();
+        public studentControl() { 
+            InitializeComponent();
+        }
 
+        public void FillInfo() {
+            NameUser.Content += Session.GetInstance().User.Name;
+            ClassUser.Content += Session.GetInstance().User.Classe;
+        }
     }
 }

@@ -7,8 +7,9 @@
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
     <Grid Name="studControl" Background="White">
-        <Label Content="Nom prénom" HorizontalAlignment="Left" Margin="268,31,0,0" VerticalAlignment="Top" Width="185" x:Name="NameUser"/>
-        <Label Content="classe&#xA;" HorizontalAlignment="Left" Margin="453,31,0,0" VerticalAlignment="Top" Width="97" x:Name="ClassUser"/>
+        <Label Content="Nom : " HorizontalAlignment="Left" Margin="268,31,0,0" VerticalAlignment="Top" Width="185" x:Name="NameUser"/>
+        <Label Content="Classe : " HorizontalAlignment="Left" Margin="453,31,0,0" VerticalAlignment="Top" Width="97" x:Name="ClassUser"/>
+        <Label Content="Matière : " HorizontalAlignment="Left" Margin="600,31,0,0" VerticalAlignment="Top" Width="97" x:Name="MatiereUser"/>
         <DataGrid AutoGenerateColumns="False"  Margin="0,121,0,10">
             <DataGrid.Columns>
                 <DataGridTextColumn Header="Elèves"  FontFamily="Arial" FontStyle="Italic" Width="*"/>

@@ -68,6 +68,8 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Compile Include="Classes\Data\generateUsers.cs" />
+    <Compile Include="Classes\MatiereEnum.cs" />
+    <Compile Include="Classes\Session.cs" />
     <Compile Include="Classes\Nav.cs" />
     <Compile Include="Classes\RoleEnum.cs" />
     <Compile Include="Classes\User.cs" />
@@ -85,6 +87,18 @@
       <DependentUpon>201912180940244_refactoClass.cs</DependentUpon>
     </Compile>
     <Compile Include="control\userControl.cs" />
+    <Compile Include="Migrations\201912181536371_MatiereEnum.cs" />
+    <Compile Include="Migrations\201912181536371_MatiereEnum.designer.cs">
+      <DependentUpon>201912181536371_MatiereEnum.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201912181602175_update.cs" />
+    <Compile Include="Migrations\201912181602175_update.designer.cs">
+      <DependentUpon>201912181602175_update.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201912181614038_addUsers.cs" />
+    <Compile Include="Migrations\201912181614038_addUsers.designer.cs">
+      <DependentUpon>201912181614038_addUsers.cs</DependentUpon>
+    </Compile>
     <Compile Include="view\studentControl.xaml.cs">
       <DependentUpon>studentControl.xaml</DependentUpon>
     </Compile>
@@ -145,6 +159,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201912180940244_refactoClass.resx">
       <DependentUpon>201912180940244_refactoClass.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201912181536371_MatiereEnum.resx">
+      <DependentUpon>201912181536371_MatiereEnum.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201912181602175_update.resx">
+      <DependentUpon>201912181602175_update.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201912181614038_addUsers.resx">
+      <DependentUpon>201912181614038_addUsers.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

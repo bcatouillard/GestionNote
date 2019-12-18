@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace GestionNote.control
 {
-    public class userControl
+    public class UserControls
     {
         public bool SignIn(string log, string pswd, RoleEnum list)
         {
@@ -32,21 +32,32 @@ namespace GestionNote.control
                     {
                         usr = user;
                         success = true;
+                        Session.GetInstance().User = user;
                     }
                     else
                     {
                         success = false;
                     }
                 }
-                if(success == true)
+                return success;
+            }
+        }
+
+        public MatiereEnum GetMatiere(User usr)
+        {
+            using (Classes.Data.AppContext context = new Classes.Data.AppContext())
+            {
+                IEnumerable<Teacher> teacherList = context.GetTeachers.Where((user) => user.Login == usr.Login);
+
+                foreach (Teacher teacher in teacherList)
                 {
-                    return true;
-                }
-                else
-                {
-                    return false;
+                    if (teacher.Login == usr.Login)
+                    {
+                        return teacher.Matiere;
+                    }
                 }
             }
+            return MatiereEnum.nul;
         }
     }
 }

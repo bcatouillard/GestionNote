@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace GestionNote.Classes
 {
-    class User
+    public class User
     {
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]

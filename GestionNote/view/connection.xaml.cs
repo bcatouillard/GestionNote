@@ -21,9 +21,9 @@ namespace GestionNote.view
     /// <summary>
     /// Logique d'interaction pour connection.xaml
     /// </summary>
-    public partial class Connection : UserControl
+    public partial class Connection : System.Windows.Controls.UserControl
     {
-        readonly userControl uc = new userControl();
+        readonly control.UserControls uc = new control.UserControls();
 
         public Connection()
         {

@@ -7,8 +7,8 @@
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800" Background="White">
     <Grid Name="studControl">
-        <Label Content="Nom prénom" HorizontalAlignment="Left" Margin="268,31,0,0" VerticalAlignment="Top" Width="185" x:Name="NameUser"/>
-        <Label Content="classe&#xA;" HorizontalAlignment="Left" Margin="453,31,0,0" VerticalAlignment="Top" Width="97" x:Name="ClassUser"/>
+        <Label Content="Nom : " HorizontalAlignment="Left" Margin="268,31,0,0" VerticalAlignment="Top" Width="185" x:Name="NameUser"/>
+        <Label Content="Classe : " HorizontalAlignment="Left" Margin="453,31,0,0" VerticalAlignment="Top" Width="97" x:Name="ClassUser"/>
         <ComboBox x:Name="MatiereUser" HorizontalAlignment="Left" Margin="630,35,0,0" VerticalAlignment="Top" Width="120" SelectedIndex="0">
             <System:String>Matiere</System:String>
         </ComboBox>
