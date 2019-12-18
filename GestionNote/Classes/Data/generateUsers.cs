@@ -9,7 +9,7 @@ namespace GestionNote.Classes.Data
     class generateUsers
     {
         public void GenerateUsers()
-        {
+        {/*
             using (AppContext context = new AppContext())
             {
                 Student student = new Student("eleve", "eleve", "eleve",18,"B3");
@@ -20,6 +20,6 @@ namespace GestionNote.Classes.Data
 
                 context.SaveChanges();
             }
-        }
+        */}
     }
 }
