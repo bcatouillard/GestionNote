@@ -59,5 +59,22 @@ namespace GestionNote.control
             }
             return MatiereEnum.nul;
         }
+
+        public int GetAge(User usr)
+        {
+            using (Classes.Data.AppContext context = new Classes.Data.AppContext())
+            {
+                IEnumerable<Student> studentList = context.GetStudents.Where((user) => user.Login == usr.Login);
+
+                foreach (Student student in studentList)
+                {
+                    if (student.Login == usr.Login)
+                    {
+                        return student.Age;
+                    }
+                }
+            }
+            return 0;
+        }
     }
 }
