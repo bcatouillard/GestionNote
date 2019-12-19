@@ -7,11 +7,11 @@ namespace GestionNote.view
     /// <summary>
     /// Logique d'interaction pour teacherControl.xaml
     /// </summary>
-    public partial class teacherControl : UserControl
+    public partial class TeacherControl : UserControl
     {
-        UserControls uc = new UserControls();
+        readonly UserControls uc = new UserControls();
 
-        public teacherControl()
+        public TeacherControl()
         {
             InitializeComponent();
         }

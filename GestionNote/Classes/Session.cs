@@ -34,7 +34,7 @@ namespace GestionNote.Classes
 
     public class CurrentUserConnectedEventArgs : EventArgs
     {
-        public User usr { get; set; }
+        public User Usr { get; set; }
     }
 
     public delegate void CurrentUserConnectedEventHandler(Object sender, CurrentUserConnectedEventArgs e);

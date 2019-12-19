@@ -28,25 +28,25 @@ namespace GestionNote
                 case ViewEnum.connection:
                     connect.Visibility = Visibility.Visible;
                     student.Visibility = Visibility.Collapsed;
-                    teacher.Visibility = Visibility.Collapsed;
+                    Teacher.Visibility = Visibility.Collapsed;
                     break;
                 case ViewEnum.studentControl:
                     
                     connect.Visibility = Visibility.Collapsed;
                     student.Visibility = Visibility.Visible;
-                    teacher.Visibility = Visibility.Collapsed;
+                    Teacher.Visibility = Visibility.Collapsed;
                     student.FillInfo();
                     break;
                 case ViewEnum.teacherControl:
                     connect.Visibility = Visibility.Collapsed;
                     student.Visibility = Visibility.Collapsed;
-                    teacher.Visibility = Visibility.Visible;
-                    teacher.FillInfo();
+                    Teacher.Visibility = Visibility.Visible;
+                    Teacher.FillInfo();
                     break;
                 default:
                     connect.Visibility = Visibility.Visible;
                     student.Visibility = Visibility.Collapsed;
-                    teacher.Visibility = Visibility.Collapsed;
+                    Teacher.Visibility = Visibility.Collapsed;
                     break;
             }
 
