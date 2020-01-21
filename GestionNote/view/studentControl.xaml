@@ -11,17 +11,10 @@
         <Label Content="Nom : " HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="185" x:Name="NameUser"/>
         <Label Content="Classe : " HorizontalAlignment="Left" Margin="670,10,0,0" VerticalAlignment="Top" Width="97" x:Name="ClassUser"/>
         <Label Content="Âge : " HorizontalAlignment="Left" Margin="10,41,0,0" VerticalAlignment="Top" Width="185" x:Name="AgeUser"/>
-        <ComboBox x:Name="MatiereUser" HorizontalAlignment="Left" Margin="670,43,0,0" VerticalAlignment="Top" Width="120" SelectedIndex="0">
-            <System:String>Matiere</System:String>
-            <Classes:MatiereEnum>Français</Classes:MatiereEnum>
-            <Classes:MatiereEnum>Mathématiques</Classes:MatiereEnum>
-            <Classes:MatiereEnum>Anglais</Classes:MatiereEnum>
-        </ComboBox>
-        <DataGrid AutoGenerateColumns="False"  Margin="10,97,10,24" Name="NotesDataGrid" SelectedIndex="0">
+        <DataGrid Margin="10,97,10,24" Name="NotesDataGrid" SelectedIndex="0" AutoGenerateColumns="False" ItemsSource="{Binding notesStudent}">
             <DataGrid.Columns>
-                <DataGridTextColumn Header="Matière"  FontFamily="Arial" FontStyle="Italic" Width="0.25*"/>
-                <DataGridTextColumn Header="Moyenne"  FontFamily="Arial" FontStyle="Italic" Width="125"/>
-                <DataGridTextColumn Header="Notes"  FontFamily="Arial" FontWeight="Bold" Width="0.25*"/>
+                <DataGridTextColumn Header="Matière"  FontFamily="Arial" FontStyle="Italic" Width="0.25*" Binding="{Binding notesStudent.Key}"/>
+                <DataGridTextColumn Header="Notes"  FontFamily="Arial" FontWeight="Bold" Width="0.25*" Binding="{Binding notesStudent.Value}"/>
             </DataGrid.Columns>
         </DataGrid>
     </Grid>

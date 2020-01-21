@@ -11,8 +11,8 @@
         <Label Content="Matière : " HorizontalAlignment="Left" Margin="10,72,0,0" VerticalAlignment="Top" Width="97" x:Name="MatiereUser"/>
         <DataGrid AutoGenerateColumns="False"  Margin="0,103,57,28">
             <DataGrid.Columns>
-                <DataGridTextColumn Header="Elèves"  FontFamily="Arial" FontStyle="Italic" Width="*"/>
-                <DataGridTextColumn Header="Notes"  FontFamily="Arial" FontWeight="Bold" Width="*"/>
+                <DataGridTextColumn Header="Elèves"  FontFamily="Arial" FontStyle="Italic" Width="*" Binding="{Binding studentList}"/>
+                <DataGridTextColumn Header="Notes"  FontFamily="Arial" FontWeight="Bold" Width="*" Binding="{Binding notesList}"/>
             </DataGrid.Columns>
         </DataGrid>
     </Grid>

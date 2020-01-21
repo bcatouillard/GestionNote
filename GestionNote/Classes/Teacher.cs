@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace GestionNote.Classes
 {
-    class Teacher : User
+    public class Teacher : User
     {
         public MatiereEnum Matiere { get; set; }
 

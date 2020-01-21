@@ -6,12 +6,15 @@ using System.Threading.Tasks;
 
 namespace GestionNote.Classes.Data
 {
-    class generateUsers
+    class GenerateUsers
     {
-        /*public static void GenerateUsers()
+        // Génère un jeu d'utilisateurs
+        public static void GenerateDataUsers()
         {
-            Dictionary<MatiereEnum, int[]> notes = new Dictionary<MatiereEnum, int[]>();
-            notes.Add(MatiereEnum.Anglais, new int[] { 1, 3 });
+            Dictionary<MatiereEnum, int[]> notes = new Dictionary<MatiereEnum, int[]>
+            {
+                { MatiereEnum.Anglais, new int[] { 1, 3 } }
+            };
 
             using (AppContext context = new AppContext())
             {
@@ -23,6 +26,7 @@ namespace GestionNote.Classes.Data
 
                 context.SaveChanges();
             }
-        }*/
+        }
+
     }
 }

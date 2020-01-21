@@ -16,11 +16,6 @@ namespace GestionNote
             Nav.GetInstance().ChangeView += MainWindow_ChangeView;
         }
 
-        private void MainWindow_CurrentUser(object sender, CurrentUserConnectedEventArgs e)
-        {
-            student.FillInfo();
-        }
-
         private void MainWindow_ChangeView(object sender, ChangeViewEventArgs e)
         {
             switch (e.View)
