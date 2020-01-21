@@ -2,18 +2,8 @@
 using GestionNote.control;
 using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
+using GestionNote.Classes.Data;
 
 namespace GestionNote.view
 {
@@ -22,13 +12,25 @@ namespace GestionNote.view
     /// </summary>
     public partial class studentControl : UserControl
     {
+        readonly UserControls uc = new UserControls();
+
         public studentControl() { 
             InitializeComponent();
+            DataContext = this;
         }
 
-        public void FillInfo() {
+        // Méthode qui remplit les labels concernant les informations de l'utilisateur
+        public void FillInfo()
+        {
             NameUser.Content += Session.GetInstance().User.Name;
             ClassUser.Content += Session.GetInstance().User.Classe;
+            AgeUser.Content += (uc.GetAge(Session.GetInstance().User) != 0) ? "" + uc.GetAge(Session.GetInstance().User) + " ans" : "";
+
+            try { 
+                Dictionary<MatiereEnum, int[]>notesStudent = Session.GetInstance().Student.Notes;
+            }
+            catch (Exception err) { }
         }
+
     }
 }

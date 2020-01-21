@@ -16,11 +16,6 @@ namespace GestionNote
             Nav.GetInstance().ChangeView += MainWindow_ChangeView;
         }
 
-        private void MainWindow_CurrentUser(object sender, CurrentUserConnectedEventArgs e)
-        {
-            student.FillInfo();
-        }
-
         private void MainWindow_ChangeView(object sender, ChangeViewEventArgs e)
         {
             switch (e.View)
@@ -28,25 +23,25 @@ namespace GestionNote
                 case ViewEnum.connection:
                     connect.Visibility = Visibility.Visible;
                     student.Visibility = Visibility.Collapsed;
-                    teacher.Visibility = Visibility.Collapsed;
+                    Teacher.Visibility = Visibility.Collapsed;
                     break;
                 case ViewEnum.studentControl:
                     
                     connect.Visibility = Visibility.Collapsed;
                     student.Visibility = Visibility.Visible;
-                    teacher.Visibility = Visibility.Collapsed;
+                    Teacher.Visibility = Visibility.Collapsed;
                     student.FillInfo();
                     break;
                 case ViewEnum.teacherControl:
                     connect.Visibility = Visibility.Collapsed;
                     student.Visibility = Visibility.Collapsed;
-                    teacher.Visibility = Visibility.Visible;
-                    teacher.FillInfo();
+                    Teacher.Visibility = Visibility.Visible;
+                    Teacher.FillInfo();
                     break;
                 default:
                     connect.Visibility = Visibility.Visible;
                     student.Visibility = Visibility.Collapsed;
-                    teacher.Visibility = Visibility.Collapsed;
+                    Teacher.Visibility = Visibility.Collapsed;
                     break;
             }
 

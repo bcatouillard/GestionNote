@@ -2,7 +2,7 @@
 
 namespace GestionNote.Classes
 {
-    class Student : User
+    public class Student : User
     {
         public int Age { get; set; }
 

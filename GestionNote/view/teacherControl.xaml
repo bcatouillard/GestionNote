@@ -1,19 +1,18 @@
-﻿<UserControl x:Class="GestionNote.view.teacherControl"
+﻿<UserControl x:Class="GestionNote.view.TeacherControl"
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
-             xmlns:local="clr-namespace:GestionNote.view"
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
-    <Grid Name="studControl" Background="White">
-        <Label Content="Nom : " HorizontalAlignment="Left" Margin="268,31,0,0" VerticalAlignment="Top" Width="185" x:Name="NameUser"/>
-        <Label Content="Classe : " HorizontalAlignment="Left" Margin="453,31,0,0" VerticalAlignment="Top" Width="97" x:Name="ClassUser"/>
-        <Label Content="Matière : " HorizontalAlignment="Left" Margin="600,31,0,0" VerticalAlignment="Top" Width="97" x:Name="MatiereUser"/>
-        <DataGrid AutoGenerateColumns="False"  Margin="0,121,0,10">
+    <Grid Name="studControl" Background="White" Width="856" Height="463">
+        <Label Content="Nom : " HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="185" x:Name="NameUser"/>
+        <Label Content="Classe : " HorizontalAlignment="Left" Margin="10,41,0,0" VerticalAlignment="Top" Width="97" x:Name="ClassUser"/>
+        <Label Content="Matière : " HorizontalAlignment="Left" Margin="10,72,0,0" VerticalAlignment="Top" Width="97" x:Name="MatiereUser"/>
+        <DataGrid AutoGenerateColumns="False"  Margin="0,103,57,28">
             <DataGrid.Columns>
-                <DataGridTextColumn Header="Elèves"  FontFamily="Arial" FontStyle="Italic" Width="*"/>
-                <DataGridTextColumn Header="Notes"  FontFamily="Arial" FontWeight="Bold" Width="*"/>
+                <DataGridTextColumn Header="Elèves"  FontFamily="Arial" FontStyle="Italic" Width="*" Binding="{Binding studentList}"/>
+                <DataGridTextColumn Header="Notes"  FontFamily="Arial" FontWeight="Bold" Width="*" Binding="{Binding notesList}"/>
             </DataGrid.Columns>
         </DataGrid>
     </Grid>

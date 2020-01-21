@@ -6,11 +6,15 @@
         xmlns:local="clr-namespace:GestionNote"
         xmlns:view="clr-namespace:GestionNote.view"
         mc:Ignorable="d"
-        Title="Gestion des Notes" Height="450" Width="800">
+        Title="Gestion des Notes" Height="504" Width="864.5" HorizontalAlignment="Center">
     <Grid Name="mainGrid">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="91*"/>
+            <ColumnDefinition Width="8*"/>
+        </Grid.ColumnDefinitions>
         <Label Content="Gestion des notes" HorizontalAlignment="Left" Margin="302,10,0,0" VerticalAlignment="Top" Width="153" FontSize="18" RenderTransformOrigin="0.5,0.5"/>
-        <view:Connection x:Name="connect" Visibility="Visible"></view:Connection>
-        <view:studentControl x:Name="student" Visibility="Collapsed"></view:studentControl>
-        <view:teacherControl x:Name="teacher" Visibility="Collapsed"></view:teacherControl>
+        <view:Connection x:Name="connect" Visibility="Visible" Grid.ColumnSpan="2"></view:Connection>
+        <view:studentControl x:Name="student" Visibility="Collapsed" Grid.ColumnSpan="2"></view:studentControl>
+        <view:TeacherControl x:Name="Teacher" Visibility="Collapsed" Grid.ColumnSpan="2"></view:TeacherControl>
     </Grid>
 </Window>
